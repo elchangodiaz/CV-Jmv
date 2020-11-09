@@ -1,0 +1,25 @@
+{
+    "acerca": "About me",
+    "nav": {
+      "acercaN": "About me",
+      "social": "Social Networks"
+    },
+    "ingeniero": "Computing Engineer",
+    "educacion": "Education",
+    "FesAr": {
+        "anio": "2016 - 2020",
+        "estudios": "Computer engineering.",
+        "titulo": "100%  of credits obtained in the time established by the program.",
+        "colaboraciones": "Collaboration in PAPIME projects of UNAM focused to improve teaching through augmented reality. "
+      },
+      "perfil": {
+        "perfilH": "Profile",
+        "perfilIng": "-Software engineer with knowledge in coding, networking, data base and electronic circuits.",
+        "backend": "-Desarrollo de software en Java enfocado a web, apps móviles y generación de servicios en glassfish y ubuntu server como Rest, JavaEE, JSPs, JavaDBC entre otros.",
+        "frontend": "-Manejo de lenguajes como C, C++, Swift, Python, PHP, SQL. \n-Diseño e implementación de interfaces con HTML, CSS, JS, agregando bibliotecas como Bootstrap y Vue.js. Desarrollo con Angular. -Manejo de sistemas operativos Linux, Windows, MacOs. \n-Implementación de redes en packet tracer y de vpn con openvpn. \n-Uso de microcontroladors como Arduino, RaspberryPi y Pic. \n-Manejo de Android Studio, Xcode, Flutter, Visual Studio, Netbeans, Blender, Unity, MySql, SQL Server, Packet Tracer, Rapid Miner, etc. \n-Manejo de Github    https://github.com/elchangodiaz -Majeno de firebase y Amazon Web Services. \n-Implementación de aplicaciones de Realidad Aumentada."
+      },
+      "habilidades": "Habilities",
+      "soluciones": "Solutions"
+
+
+  }
