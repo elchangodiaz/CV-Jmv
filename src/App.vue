@@ -4,6 +4,7 @@
     <the-mobile-nav id="mobile-nav" />
     <div class="view-container">
       <router-view/>
+      <chart/>
     </div>
   </div>
 </template>
@@ -11,11 +12,13 @@
 <script>
 import TheDesktopNav from '@/components/TheDesktopNav'
 import TheMobileNav from '@/components/TheMobileNav'
+import Chart from '@/components/chart'
 
 export default {
   components:{
     TheDesktopNav,
-    TheMobileNav
+    TheMobileNav,
+    Chart
   } 
 }
 </script>

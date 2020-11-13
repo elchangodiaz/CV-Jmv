@@ -14,12 +14,51 @@
       },
       "perfil": {
         "perfilH": "Profile",
-        "perfilIng": "-Software engineer with knowledge in coding, networking, data base and electronic circuits.",
-        "backend": "-Desarrollo de software en Java enfocado a web, apps móviles y generación de servicios en glassfish y ubuntu server como Rest, JavaEE, JSPs, JavaDBC entre otros.",
-        "frontend": "-Manejo de lenguajes como C, C++, Swift, Python, PHP, SQL. \n-Diseño e implementación de interfaces con HTML, CSS, JS, agregando bibliotecas como Bootstrap y Vue.js. Desarrollo con Angular. -Manejo de sistemas operativos Linux, Windows, MacOs. \n-Implementación de redes en packet tracer y de vpn con openvpn. \n-Uso de microcontroladors como Arduino, RaspberryPi y Pic. \n-Manejo de Android Studio, Xcode, Flutter, Visual Studio, Netbeans, Blender, Unity, MySql, SQL Server, Packet Tracer, Rapid Miner, etc. \n-Manejo de Github    https://github.com/elchangodiaz -Majeno de firebase y Amazon Web Services. \n-Implementación de aplicaciones de Realidad Aumentada."
+        "perfilIng": "Software engineer with knowledge in coding, networking, data base and electronic circuits.",
+        "backend": "Java development focused on web, mobile apps and service server like glassfish or linux server, usage and developmento of Rest, JavaEE, JSPs, JavaDBC and their variants.",
+        "lenguajes": "Lenguages",
+        "frontend":"Design and implementation of interfaces using HTML, CSS, JS adding libraries like bootstrap and design standards for android.",
+        "web": "Firebase, Node.js, Java, Vue.js., Angular, React.",
+        "os":"Linux, Windows, MacOs.",
+        "network":"Networking design and implementation practice with packet tracer and vpn implementation with openvpn.", 
+        "circuitos":"Microcontrollers Arduino, RaspberryPi and Pic.",
+        "software": "Android Studio, Xcode, Flutter, Visual Studio, Netbeans, Blender, Unity, MySql, SQL Server, Packet Tracer, Rapid Miner, etc.",
+        "repos": "Github: https://github.com/elchangodiaz, firebase and Amazon Web Services.",
+        "ar":"Implementation of augmented reality."
       },
       "habilidades": "Habilities",
-      "soluciones": "Solutions"
-
+      "soluciones": "Solutions",
+      "web": "Web development",
+      "programacion": "Programming",
+      "red": "Networking",
+      "bd": "Data Base",
+      "inglesG": "English",
+  
+      "habla": { 
+        "idioma": "Lenguages",
+        "espaniol": "Spanish - Native",
+        "ingles": "English - Conversational"
+      },
+    
+      "aptitudes": "Aptitudes",
+    
+      "detalles": {
+        "informacion": "Information",
+        "infoTech": "With a focus on development, I am very interested in the implementation of technologies in any area of daily life, learning about innovative technologies and constantly improving my skills.",
+        "infoHacks": "I really like to participate in contests called hackathons giving solutions to problems through the use of technologies, I have obtained two second places in Nestle's Digital Mom Hack and Hackify's Virtual Hack, in both I contribute with an android mobile app one for a bracelet that measures vital signs and shows them in the app, and another that allows you to translate Python code into Spanish.",
+        "infoCursosD": "I've imparted a mini-workshop development of Swift and Android",
+        "infoCursosT": "I've taken couses of Swift, Android, Linux, big data, Java and Net-Training."  
+      },
+    
+      "contacto": "Contact",
+      "telefono": "Phone number",
+      "correo": "Email",
+    
+      "aficion": {
+        "aficiones": "Hobbies",
+        "deportes": "I'm passionate about sports, I practice soccer, surfing, road and mountain cycling.", 
+        "juegos": "Playing videogames amuses me and I have learned to develop them as a practice of programming and 3D modeling. ",
+        "musica": "I like to hear and play music, I like guitar and harmonica, blues is one of my favorite musical genres."
+      }
 
   }

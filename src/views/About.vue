@@ -12,7 +12,8 @@
       <br/>
       <h3>{{ $t('educacion') }}</h3>
       <b>Facultad de estudios Superiores Aragon</b>
-      <p>{{ $t('FesAr.estudios') }} <br/> 
+      <p>{{ $t('FesAr.estudios') }} <br/>
+      {{ $t('FesAr.anio') }} <br/> 
       {{ $t('FesAr.titulo') }} <br/>
       {{ $t('FesAr.colaboraciones') }}</p>
 
@@ -26,30 +27,57 @@
           <th>{{ $t('soluciones') }}</th>
         </tr>
         <tr>
-          <td>Diseño</td>
-          <td>Photoshop, gimp</td>
+          <td>Backend</td>
+          <td>{{ $t('perfil.backend') }}</td>
         </tr>
         <tr>
-          <td>Front-end</td>
-          <td>Vue.js, Angular, HTML, CSS, JavsScript</td>
+          <td>{{ $t('perfil.lenguajes') }}</td>
+          <td>Java, Kotlin, C, C++, Swift, Python, PHP, SQL, JS</td>
         </tr>
         <tr>
-          <td>Back-end</td>
-          <td>Firebase, Node.js, SQL, Java</td>
+          <td>FrontEnd</td>
+          <td>{{ $t('perfil.frontend') }}</td>
         </tr>
         <tr>
-          <td>3D Model</td>
-          <td>Blender, Unity, Unreal Engine, Spark-Ar, Arcore</td>
+          <td>WEB</td>
+          <td>Firebase, Node.js, SQL, Java, Vue.js., Angular, React.</td>
         </tr>
+        <tr>
+          <td>Software</td>
+          <td>Android Studio, Xcode, Flutter, Visual Studio, Netbeans, Blender, Unity, MySql, SQL Server, Packet Tracer, Rapid Miner, etc.</td>
+        </tr>
+        <tr>
+          <td>OS</td>
+          <td>Linux, Windows, MacOs.</td>
+        </tr>        
+        <tr>
+          <td>Networking</td>
+          <td>{{ $t('perfil.network') }}</td>
+        </tr>
+        <tr>
+          <td>AR</td>
+          <td>{{ $t('perfil.ar') }}</td>
+        </tr>
+        <tr>
+          <td>Repos</td>
+          <td>{{ $t('perfil.repos') }}</td>
+        </tr>                 
       </table>
 
-      <p>
-        Este texto es de prueba ####### ########### ########### ######## ########,
-        ############################ ###################### ####################,#
-        ################### ################## ###############  ##################
-        ############# ##################### ################# ##############  #####
-        ############ ######## #########
-      </p>
+      <h3>{{ $t('habla.idioma') }}</h3>
+      <p>{{ $t('habla.espaniol') }}</p>
+      <p>{{ $t('habla.ingles') }}</p>
+
+      <h3>{{ $t('detalles.informacion') }}</h3>
+      <p>{{ $t('detalles.infoTech') }}</p>
+      <p>{{ $t('detalles.infoHacks') }}</p>
+      <p>{{ $t('detalles.infoCursosD') }}</p>
+      <p>{{ $t('detalles.infoCursosT') }}</p>
+
+
+
+
+
     </div>
   </div>
 </template>
