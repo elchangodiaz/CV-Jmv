@@ -1,27 +1,22 @@
 {
   "name": "cv-jmv",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "chart.js": "^2.9.4",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-chartjs": "^3.5.1",
-    "vue-i18n": "^8.22.1",
-    "vue-router": "^3.2.0"
+    "@fontsource/montserrat": "^5.3.0",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "vue-cli-plugin-i18n": "~1.0.1",
-    "vue-template-compiler": "^2.6.11"
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
