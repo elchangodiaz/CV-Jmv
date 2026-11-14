@@ -1,23 +1,10 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import '@fontsource/montserrat/400.css'
+import '@fontsource/montserrat/500.css'
+import '@fontsource/montserrat/600.css'
+import '@fontsource/montserrat/700.css'
 import App from './App.vue'
-import router from './router'
-import i18n from './i18n'
+import reveal from './directives/reveal.js'
+import './styles/main.css'
 
-Vue.config.productionTip = false
-
-//use beforeEach route guard to set the lenguage
-router.beforeEach((to, from, next) => {
-  let lenguage = to.params.lang;
-  if(!lenguage){
-    lenguage = 'es'
-  }
-
-  i18n.locale = lenguage
-  next()
-})
-
-new Vue({
-  router,
-  i18n,
-  render: h => h(App)
-}).$mount('#app')
+createApp(App).directive('reveal', reveal).mount('#app')

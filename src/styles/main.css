@@ -1,0 +1,463 @@
+/* Paleta de la versión original: barra lateral gris, menú #555 y tarjetas #333 / #222 */
+:root {
+  --sidebar-width: 20vw;
+  --page-bg: #ffffff;
+  --sidebar-bg: #bdbdbd;
+  --menu-bg: #555555;
+  --menu-hover: #333333;
+  --card-bg: #333333;
+  --card-head: #222222;
+  --chip-bg: #444444;
+  --text: #ffffff;
+  --text-soft: #e0e0e0;
+  --text-muted: #a8a8a8;
+  --sidebar-text: #222222;
+  --sidebar-text-soft: #555555;
+
+  /* Colores de la gráfica del sitio original, usados en el modo creativo */
+  --c-pink: #ff6384;
+  --c-blue: #36a2eb;
+  --c-yellow: #ffce56;
+  --c-teal: #4bc0c0;
+  --c-purple: #9966ff;
+  --c-orange: #ff9f40;
+}
+
+/* ---------- Modo creativo ---------- */
+[data-mode='creative'] {
+  --page-bg: radial-gradient(circle at 85% 0%, rgba(255, 99, 132, 0.18), transparent 40%),
+    radial-gradient(circle at 30% 100%, rgba(54, 162, 235, 0.18), transparent 45%), #f4f1fb;
+  --sidebar-bg: linear-gradient(165deg, #9966ff 0%, #6f7cf0 50%, #36a2eb 100%);
+  --menu-bg: rgba(255, 255, 255, 0.16);
+  --menu-hover: rgba(255, 255, 255, 0.3);
+  --card-bg: #251f3a;
+  --card-head: #1b162b;
+  --chip-bg: #322a4d;
+  --text-soft: #e6e1f5;
+  --text-muted: #b3abc9;
+  --sidebar-text: #ffffff;
+  --sidebar-text-soft: rgba(255, 255, 255, 0.85);
+}
+
+[data-mode='creative'] body {
+  background-attachment: fixed;
+}
+
+[data-mode='creative'] .monogram {
+  background: linear-gradient(135deg, var(--c-pink), var(--c-orange), var(--c-yellow)) !important;
+  color: #1a1a1a !important;
+}
+
+[data-mode='creative'] .card-title {
+  background: linear-gradient(100deg, rgba(153, 102, 255, 0.45), var(--card-head) 55%);
+}
+
+[data-mode='creative'] .stat:nth-child(1) .stat-value {
+  color: var(--c-teal);
+}
+[data-mode='creative'] .stat:nth-child(2) .stat-value {
+  color: var(--c-yellow);
+}
+[data-mode='creative'] .stat:nth-child(3) .stat-value {
+  color: var(--c-pink);
+}
+[data-mode='creative'] .stat:nth-child(4) .stat-value {
+  color: var(--c-blue);
+}
+
+[data-mode='creative'] .chips > li:nth-child(6n + 1) .chip {
+  border-color: var(--c-teal);
+}
+[data-mode='creative'] .chips > li:nth-child(6n + 2) .chip {
+  border-color: var(--c-blue);
+}
+[data-mode='creative'] .chips > li:nth-child(6n + 3) .chip {
+  border-color: var(--c-purple);
+}
+[data-mode='creative'] .chips > li:nth-child(6n + 4) .chip {
+  border-color: var(--c-pink);
+}
+[data-mode='creative'] .chips > li:nth-child(6n + 5) .chip {
+  border-color: var(--c-orange);
+}
+[data-mode='creative'] .chips > li:nth-child(6n + 6) .chip {
+  border-color: var(--c-yellow);
+}
+
+[data-mode='creative'] .btn-primary {
+  background: linear-gradient(90deg, var(--c-pink), var(--c-orange));
+  color: #1a1a1a;
+}
+
+[data-mode='creative'] .segment {
+  background: linear-gradient(90deg, var(--c-purple), var(--c-blue)) !important;
+}
+
+.toast {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 22rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  background: linear-gradient(120deg, var(--c-purple), var(--c-blue));
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.toast a {
+  margin-left: auto;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.toast-enter-from,
+.toast-leave-to {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.toast-enter-active,
+.toast-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.card,
+.card-title {
+  transition: background 0.5s ease;
+}
+
+#lab,
+#hobbies {
+  margin-top: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #222222;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--card-head);
+  color: #fff;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------- Layout ---------- */
+.view-container {
+  margin-left: var(--sidebar-width);
+  padding: 1.5em;
+  min-height: 100vh;
+}
+
+.view-container > * {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Tarjetas (como .about-card original) ---------- */
+.card {
+  padding: 3em;
+  border-radius: 10px;
+  background: var(--card-bg);
+  color: var(--text);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card + .card {
+  margin-top: 1.5rem;
+}
+
+.card-title {
+  padding: 1.75rem 2rem;
+  border-radius: 10px;
+  background: var(--card-head);
+}
+
+.card-title h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.card-title .eyebrow {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.card-body {
+  margin-top: 2rem;
+}
+
+.footer {
+  padding: 2rem 0 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #757575;
+}
+
+/* ---------- Etiquetas ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #5a5a5a;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--text-soft);
+  font: inherit;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.chip-button {
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.chip-button:hover {
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
+.chip-button.selected {
+  border-color: #fff;
+  background: #fff;
+  color: var(--card-head);
+}
+
+.chip-button.selected::before {
+  color: var(--card-head);
+}
+
+/* ---------- Pestañas (Laboratorio y Asistente) ---------- */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.tab {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 8px 8px 0 0;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.tab:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tab[aria-selected='true'] {
+  color: #fff;
+  background: var(--card-head);
+}
+
+.tab[aria-selected='true']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--tab-color, #fff);
+}
+
+.panel {
+  padding-top: 1.75rem;
+}
+
+/* ---------- Botones (mismo estilo que el menú) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.4rem;
+  background: var(--menu-bg);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background: var(--card-head);
+}
+
+.btn-primary {
+  background: #fff;
+  color: var(--card-head);
+}
+
+.btn-primary:hover {
+  background: var(--sidebar-bg);
+}
+
+/* ---------- Aparición al hacer scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ---------- Móvil ---------- */
+@media screen and (max-width: 1069px) {
+  html {
+    scroll-padding-top: 8rem;
+  }
+  .view-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .card {
+    padding: 1.5em;
+  }
+  .card-title {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 1em;
+  }
+}
+
+/* ---------- Impresión ---------- */
+@media print {
+  :root {
+    --card-bg: #fff;
+    --card-head: #f2f2f2;
+    --chip-bg: #fff;
+    --text: #000;
+    --text-soft: #222;
+    --text-muted: #555;
+  }
+  .sidebar,
+  .skip-link,
+  #contact,
+  .footer,
+  .toggle,
+  .chevron,
+  .hint,
+  .timeline-hint {
+    display: none !important;
+  }
+  .view-container {
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    padding: 0.5rem 0;
+    box-shadow: none;
+  }
+  .job-body {
+    grid-template-rows: 1fr !important;
+  }
+  .job.dimmed {
+    opacity: 1 !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .job,
+  .degree {
+    break-inside: avoid;
+  }
+}
