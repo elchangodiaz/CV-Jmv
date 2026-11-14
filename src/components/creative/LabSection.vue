@@ -4,6 +4,7 @@ import { useLocale } from '../../composables/useLocale.js'
 import MtbJump from './MtbJump.vue'
 import PenaltyGame from './PenaltyGame.vue'
 import TicTacToe from './TicTacToe.vue'
+import ConnectFour from './ConnectFour.vue'
 
 const { content } = useLocale()
 const lab = computed(() => content.value.creative.lab)
@@ -11,7 +12,8 @@ const lab = computed(() => content.value.creative.lab)
 const tabs = [
   { id: 'mtb', component: MtbJump },
   { id: 'soccer', component: PenaltyGame },
-  { id: 'ttt', component: TicTacToe }
+  { id: 'ttt', component: TicTacToe },
+  { id: 'c4', component: ConnectFour }
 ]
 const active = ref('mtb')
 const tabRefs = ref([])
@@ -86,6 +88,9 @@ function onKeydown(event, index) {
 }
 .tab--ttt {
   --tab-color: var(--c-yellow);
+}
+.tab--c4 {
+  --tab-color: var(--c-orange);
 }
 
 </style>

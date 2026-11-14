@@ -36,7 +36,7 @@ Ambos archivos de idioma tienen la misma estructura. Si agregas algo en uno, agr
 
 El sitio abre en **modo formal**. El selector del menú lateral activa el **modo creativo**, que cambia la paleta (colores de la gráfica original) y agrega dos secciones:
 
-- **Laboratorio** (`src/components/creative/`): animación de un salto en MTB con trucos, un juego de penales y un juego de gato (tres en raya) con minimax. Todo con SVG, sin librerías.
+- **Laboratorio** (`src/components/creative/`): animación de un salto en MTB con trucos, un juego de penales, un juego de gato (tres en raya) con minimax y Conecta 4 con minimax y poda alfa-beta. Todo con SVG, sin librerías.
 - **Fuera del código**: gustos y datos curiosos.
 
 Sus textos están en `src/content/creative.es.js` y `creative.en.js`. Este código solo se descarga cuando se activa el modo. Para compartir el sitio directamente en modo creativo: `/es?mode=creative`.

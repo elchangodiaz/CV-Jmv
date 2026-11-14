@@ -9,7 +9,7 @@ export default {
     title: 'Laboratorio',
     intro:
       'Piezas interactivas hechas a mano para este sitio con Vue y SVG, sin librerías de animación ni de juegos: física sencilla, detección de colisiones, máquinas de estado y animación cuadro por cuadro.',
-    tabs: { mtb: 'Animación: MTB', soccer: 'Juego: penales', ttt: 'Juego: gato' }
+    tabs: { mtb: 'Animación: MTB', soccer: 'Juego: penales', ttt: 'Juego: gato', c4: 'Juego: Conecta 4' }
   },
 
   mtb: {
@@ -62,6 +62,29 @@ export default {
     newGame: 'Nueva partida',
     resetScore: 'Reiniciar marcador',
     note: 'Las partidas alternan quién empieza. La evaluación supone que ambos juegan perfecto desde ahí.'
+  },
+
+  c4: {
+    title: 'Conecta 4 contra la computadora',
+    description:
+      'Aquí ya no es posible revisar todas las partidas, así que la computadora usa minimax con poda alfa-beta: analiza varias jugadas hacia adelante, descarta las ramas que no pueden mejorar su resultado y califica el tablero con una heurística (líneas abiertas y control del centro).',
+    boardLabel: 'Tablero de Conecta 4',
+    columnLabel: (c) => `Soltar ficha en la columna ${c}`,
+    yourTurn: 'Tu turno (rosa)',
+    aiThinking: 'La computadora está pensando…',
+    youWin: '¡Ganaste!',
+    aiWins: 'Gana la computadora',
+    draw: 'Empate',
+    you: 'Tú',
+    ai: 'Computadora',
+    draws: 'Empates',
+    levelLabel: 'Dificultad',
+    levels: { easy: 'Fácil', normal: 'Normal', hard: 'Difícil' },
+    depth: (d) => `Analiza ${d} ${d === 1 ? 'jugada' : 'jugadas'} hacia adelante.`,
+    analyzed: (n) => `Última jugada: ${n.toLocaleString('es-MX')} posiciones analizadas.`,
+    newGame: 'Nueva partida',
+    resetScore: 'Reiniciar marcador',
+    note: 'Teclado: Tab para llegar al tablero, flechas para cambiar de columna, Enter para soltar la ficha.'
   },
 
   hobbies: {

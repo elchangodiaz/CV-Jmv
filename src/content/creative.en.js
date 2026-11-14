@@ -9,7 +9,7 @@ export default {
     title: 'Lab',
     intro:
       'Interactive pieces hand-built for this site with Vue and SVG, no animation or game libraries: simple physics, collision checks, state machines and frame-by-frame animation.',
-    tabs: { mtb: 'Animation: MTB', soccer: 'Game: penalties', ttt: 'Game: tic-tac-toe' }
+    tabs: { mtb: 'Animation: MTB', soccer: 'Game: penalties', ttt: 'Game: tic-tac-toe', c4: 'Game: Connect 4' }
   },
 
   mtb: {
@@ -62,6 +62,29 @@ export default {
     newGame: 'New game',
     resetScore: 'Reset score',
     note: 'Games alternate who goes first. The evaluation assumes both sides play perfectly from there.'
+  },
+
+  c4: {
+    title: 'Connect 4 against the computer',
+    description:
+      'Here it is no longer possible to explore every game, so the computer uses minimax with alpha-beta pruning: it looks several moves ahead, skips branches that cannot improve its outcome and scores the board with a heuristic (open lines and center control).',
+    boardLabel: 'Connect 4 board',
+    columnLabel: (c) => `Drop a disc in column ${c}`,
+    yourTurn: 'Your turn (pink)',
+    aiThinking: 'The computer is thinking…',
+    youWin: 'You win!',
+    aiWins: 'The computer wins',
+    draw: 'Draw',
+    you: 'You',
+    ai: 'Computer',
+    draws: 'Draws',
+    levelLabel: 'Difficulty',
+    levels: { easy: 'Easy', normal: 'Normal', hard: 'Hard' },
+    depth: (d) => `Looks ${d} ${d === 1 ? 'move' : 'moves'} ahead.`,
+    analyzed: (n) => `Last move: ${n.toLocaleString('en-US')} positions analyzed.`,
+    newGame: 'New game',
+    resetScore: 'Reset score',
+    note: 'Keyboard: Tab to reach the board, arrows to change column, Enter to drop the disc.'
   },
 
   hobbies: {
