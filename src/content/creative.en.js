@@ -9,7 +9,7 @@ export default {
     title: 'Lab',
     intro:
       'Interactive pieces hand-built for this site with Vue and SVG, no animation or game libraries: simple physics, collision checks, state machines and frame-by-frame animation.',
-    tabs: { mtb: 'Animation: MTB', soccer: 'Game: penalties', cat: 'A cat' }
+    tabs: { mtb: 'Animation: MTB', soccer: 'Game: penalties', ttt: 'Game: tic-tac-toe' }
   },
 
   mtb: {
@@ -41,27 +41,27 @@ export default {
     restart: 'Play again'
   },
 
-  cat: {
-    title: 'A cat',
+  ttt: {
+    title: 'Tic-tac-toe against the computer',
     description:
-      'It follows you with its eyes. Pet it by moving the pointer over it, give it a treat or talk to it. Leave it alone for a while and it falls asleep.',
-    sceneLabel: {
-      awake: 'An orange cat sitting on a cushion, alert',
-      happy: 'The cat purrs happily',
-      eating: 'The cat eats a fish',
-      asleep: 'The cat is asleep'
-    },
-    pet: 'Pet',
-    treat: 'Treat',
-    talk: 'Talk',
-    sleep: 'Sleep',
-    wake: 'Wake up',
-    meows: ['Meow!', 'Mrrp?', 'Meooow…', 'Where is my treat?', 'Mrrrow'],
-    purr: 'Purrr…',
-    eating: 'Nom!',
-    grumpy: '…I was sleeping',
-    yawn: '*yawns*',
-    love: (n) => `${n} ${n === 1 ? 'cuddle' : 'cuddles'}`
+      'The computer decides with minimax: it explores every possible game and picks the move with the best guaranteed outcome. On impossible, the best you can do is a draw.',
+    boardLabel: 'Tic-tac-toe board',
+    cellLabel: (row, col, mark) => `Row ${row}, column ${col}: ${mark ?? 'empty'}`,
+    yourTurn: 'Your turn (X)',
+    aiThinking: 'The computer is thinking…',
+    youWin: 'You win!',
+    aiWins: 'The computer wins',
+    draw: 'Draw',
+    you: 'You',
+    ai: 'Computer',
+    draws: 'Draws',
+    levelLabel: 'Difficulty',
+    levels: { easy: 'Easy', normal: 'Normal', impossible: 'Impossible' },
+    showEval: 'Show what the algorithm sees on each square',
+    eval: { win: 'You win', draw: 'Draw', lose: 'You lose' },
+    newGame: 'New game',
+    resetScore: 'Reset score',
+    note: 'Games alternate who goes first. The evaluation assumes both sides play perfectly from there.'
   },
 
   hobbies: {

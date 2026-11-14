@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import { useLocale } from '../../composables/useLocale.js'
 import MtbJump from './MtbJump.vue'
 import PenaltyGame from './PenaltyGame.vue'
-import CatBuddy from './CatBuddy.vue'
+import TicTacToe from './TicTacToe.vue'
 
 const { content } = useLocale()
 const lab = computed(() => content.value.creative.lab)
@@ -11,7 +11,7 @@ const lab = computed(() => content.value.creative.lab)
 const tabs = [
   { id: 'mtb', component: MtbJump },
   { id: 'soccer', component: PenaltyGame },
-  { id: 'cat', component: CatBuddy }
+  { id: 'ttt', component: TicTacToe }
 ]
 const active = ref('mtb')
 const tabRefs = ref([])
@@ -84,7 +84,7 @@ function onKeydown(event, index) {
 .tab--soccer {
   --tab-color: var(--c-pink);
 }
-.tab--cat {
+.tab--ttt {
   --tab-color: var(--c-yellow);
 }
 

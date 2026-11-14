@@ -9,7 +9,7 @@ export default {
     title: 'Laboratorio',
     intro:
       'Piezas interactivas hechas a mano para este sitio con Vue y SVG, sin librerías de animación ni de juegos: física sencilla, detección de colisiones, máquinas de estado y animación cuadro por cuadro.',
-    tabs: { mtb: 'Animación: MTB', soccer: 'Juego: penales', cat: 'Un gato' }
+    tabs: { mtb: 'Animación: MTB', soccer: 'Juego: penales', ttt: 'Juego: gato' }
   },
 
   mtb: {
@@ -41,27 +41,27 @@ export default {
     restart: 'Jugar de nuevo'
   },
 
-  cat: {
-    title: 'Un gato',
+  ttt: {
+    title: 'Gato contra la computadora',
     description:
-      'Te sigue con la mirada. Acarícialo pasando el puntero sobre él, dale un premio o háblale. Si lo dejas solo un rato, se duerme.',
-    sceneLabel: {
-      awake: 'Un gato naranja sentado en un cojín, atento',
-      happy: 'El gato ronronea contento',
-      eating: 'El gato come un pescado',
-      asleep: 'El gato duerme'
-    },
-    pet: 'Acariciar',
-    treat: 'Premio',
-    talk: 'Hablarle',
-    sleep: 'Dormir',
-    wake: 'Despertar',
-    meows: ['¡Miau!', 'Mrrp?', 'Miaaau…', '¿Y mi premio?', 'Mrrrau'],
-    purr: 'Prrrr…',
-    eating: '¡Ñam!',
-    grumpy: '…estaba dormido',
-    yawn: '*bosteza*',
-    love: (n) => `${n} ${n === 1 ? 'mimo' : 'mimos'}`
+      'La computadora decide con minimax: explora todas las partidas posibles y elige la jugada con el mejor resultado garantizado. En modo imposible, lo mejor que puedes lograr es empatar.',
+    boardLabel: 'Tablero del gato',
+    cellLabel: (row, col, mark) => `Fila ${row}, columna ${col}: ${mark ?? 'libre'}`,
+    yourTurn: 'Tu turno (X)',
+    aiThinking: 'La computadora está pensando…',
+    youWin: '¡Ganaste!',
+    aiWins: 'Gana la computadora',
+    draw: 'Empate',
+    you: 'Tú',
+    ai: 'Computadora',
+    draws: 'Empates',
+    levelLabel: 'Dificultad',
+    levels: { easy: 'Fácil', normal: 'Normal', impossible: 'Imposible' },
+    showEval: 'Mostrar qué ve el algoritmo en cada casilla',
+    eval: { win: 'Ganas', draw: 'Empate', lose: 'Pierdes' },
+    newGame: 'Nueva partida',
+    resetScore: 'Reiniciar marcador',
+    note: 'Las partidas alternan quién empieza. La evaluación supone que ambos juegan perfecto desde ahí.'
   },
 
   hobbies: {
